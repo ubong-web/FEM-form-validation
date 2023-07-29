@@ -1,0 +1,240 @@
+:root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --Blue: hsl(248, 32%, 49%);
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+* Box sizing rules */ *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Fraunces", sans-serif;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media screen and (max-width: 37.5rem) {
+  body {
+    background-color: var(--Red);
+    background-image: url(images/bg-intro-mobile.png);
+  }
+  .component {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "intro" "form";
+    margin: 3rem 1.5rem;
+  }
+  .form {
+    display: grid;
+    justify-content: center;
+  }
+  .form-main {
+    background-color: white;
+    padding: 10px 2px;
+    border-radius: 15px;
+  }
+  .submit {
+    text-transform: uppercase;
+  }
+  .form-field {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+  }
+  .submit {
+    padding: 8px 40px;
+    background-color: var(--Green);
+    color: white;
+    border-color: transparent;
+    border-radius: 10px;
+  }
+
+  .click {
+    color: var(--Red);
+  }
+  .terms-condition {
+    text-align: center;
+    color: #b3b1b1;
+  }
+  input {
+    color: #b3b1b1;
+  }
+  .main-heading,
+  .main-paragraph,
+  .form-head {
+    color: white;
+    display: flex;
+    justify-content: center;
+  }
+  .form-head {
+    background-color: var(--Blue);
+    margin-bottom: 1rem;
+    border-radius: 10px;
+  }
+  .main-heading {
+    margin-bottom: 1.5rem;
+  }
+  .main-paragraph {
+    margin-bottom: 2rem;
+  }
+  .form-head-text {
+    display: flex;
+    justify-content: center;
+    padding: 15px 65px;
+  }
+  .try-free {
+    font-weight: bold;
+  }
+  .info {
+    color: var(--Red);
+  }
+}
+
+@media screen and (min-width: 37.6rem) {
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  body {
+    background-color: var(--Red);
+    background-image: url(images/bg-intro-desktop.png);
+  }
+  .component {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .intro {
+    margin-top: 5rem;
+  }
+
+  .main-heading {
+    width: 30rem;
+    /* text-align: center; */
+    padding-left: 3rem;
+    line-height: 3rem;
+    color: white;
+    font-size: 3rem;
+  }
+  .main-paragraph {
+    margin-top: 1.5rem;
+    /* text-align: center; */
+    width: 30rem;
+    color: white;
+    padding-left: 3rem;
+  }
+  .form-head {
+    background-color: var(--Blue);
+    width: 350px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  .form-head-text {
+    padding: 10px 5px;
+    text-align: center;
+    color: white;
+  }
+  .form-main {
+    background-color: white;
+    width: 350px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-radius: 5px;
+  }
+  .terms-condition {
+    text-align: center;
+    font-size: 10px;
+  }
+  .form-field {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+  }
+  input {
+    /* padding-left: 50px;
+    padding-right: 50px; */
+    width: -webkit-fill-available;
+  }
+  button {
+    width: -webkit-fill-available;
+    background-color: var(--Green);
+    color: white;
+  }
+  .click {
+    color: var(--Red);
+  }
+  .info {
+    color: var(--Red);
+  }
+}
